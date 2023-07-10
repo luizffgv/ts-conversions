@@ -1,0 +1,39 @@
+{
+  "name": "@luizffgv/ts-conversions",
+  "version": "1.0.0",
+  "description": "Utilities for safely and unsafely working around TypeScript type checking.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "prepare": "npm run build && npm run test",
+    "build": "tsc -p src/tsconfig.json && tsc -p src/tsconfig-decls.json",
+    "test": "tsc -p tests/tsconfig.json && node tests/compiled/tests.js",
+    "docs": "typedoc --tsconfig src/tsconfig.json src/index.ts",
+    "format": "prettier --write src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizffgv/ts-conversions.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Luiz Fernando F. G. Valle <luizfvalle@pm.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luizffgv/ts-conversions/issues"
+  },
+  "homepage": "https://github.com/luizffgv/ts-conversions#readme",
+  "devDependencies": {
+    "@types/assert": "1.5.6",
+    "assert": "2.0.0",
+    "prettier": "3.0.0",
+    "test": "3.3.0",
+    "typedoc": "0.24.8",
+    "typescript": "5.1.6"
+  }
+}
